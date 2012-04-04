@@ -28,7 +28,7 @@ alias cls='clear && ls'
 alias homeconfig='git --git-dir=$HOME/.homeconfig.git/ --work-tree=$HOME'
 
 #exports
-export PATH=$PATH:/opt/android-sdk/platform-tools/adb
+export PATH=$PATH:/opt/android-sdk/platform-tools/adb:/opt/android-ndk-crystax/
 export EDITOR=vim
 export ECLIPSE_HOME=/usr/share/eclipse
 export HISTSIZE=10000
