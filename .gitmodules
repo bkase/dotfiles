@@ -43,3 +43,18 @@
 [submodule ".vim/bundle/coffee-script"]
 	path = .vim/bundle/coffee-script
 	url = https://github.com/kchmck/vim-coffee-script
+[submodule "/home/bkase/.vim/bundle/NERD-Commenter"]
+	path = /home/bkase/.vim/bundle/NERD-Commenter
+	url = https://github.com/vim-scripts/The-NERD-Commenter.git
+[submodule "/home/bkase/.vim/bundle/fuzzyfinder"]
+	path = /home/bkase/.vim/bundle/fuzzyfinder
+	url = https://github.com/vim-scripts/FuzzyFinder.git
+[submodule "/home/bkase/.vim/bundle/l9"]
+	path = /home/bkase/.vim/bundle/l9
+	url = https://github.com/vim-scripts/L9.git
+[submodule "/home/bkase/.vim/bundle/snipmate"]
+	path = /home/bkase/.vim/bundle/snipmate
+	url = https://github.com/msanders/snipmate.vim.git
+[submodule "/home/bkase/.vim/bundle/taglist"]
+	path = /home/bkase/.vim/bundle/taglist
+	url = https://github.com/vim-scripts/taglist.vim.git
