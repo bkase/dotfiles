@@ -1,0 +1,13 @@
+--- bundle/snipmate/snippets/c.snippets	2011-03-12 18:21:13.962583459 -0500
++++ c.snippets	2011-03-12 18:28:31.808583461 -0500
+@@ -50,6 +50,10 @@
+ 	else {
+ 		${1}
+ 	}
++snippet elif
++	else if (${1}){
++		${2}
++	}
+ # Ternary conditional
+ snippet t
+ 	${1:/* condition */} ? ${2:a} : ${3:b}

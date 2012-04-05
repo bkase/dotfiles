@@ -1,0 +1,54 @@
+My ~/.vim folder
+
+Useful vimrc stuff:
+; is :
+<tab> is %
+jj is <ESC>
+
+,W - delete all trailing whitespace from lines in the file
+,w - split window and move cursor to new window 
+;w!! - save a file with sudo
+,a - Ack
+,v - reselect things just pasted
+<C-h>, <C-j>, <C-k>, <C-l> - navigate windows
+,t - toggle taglist
+,ig - toggle Indent Guides
+,f - Fuzzy find a file -- if you open with <C-k> it opens in a vert-spit; <C-l> is new tab
+,b - Fuzzy find a buffer
+,c<space> - Toggle comment on or off
+,cA - Append a comment to the end of the line
+,cs - Comments the selected lines
+
+:A - switch to file.h or file.c (the other)
+:AV - open a vertical split and switch
+:AT - open a new tab and switch
+
+Useful surround.vim commands:
+ysW" - surround Word with "
+ds" - delete surrounding "
+cs{ - change surroundings to { }
+vs" - select something and surround it with "
+dst - delete surrounding <tags></tags>
+
+Useful snipmate.vim snippets:
+C:
+    wh - while loop
+    for - for loop
+    if - if statement
+    elif - else if
+    el - else
+    st - struct
+    pr - printf
+    main - main function
+    fun - function
+    fpr - fprintf
+    once - include guard for header files
+    inc - #include statements
+    t - ternary operator
+
+Useful LaTeX stuff:
+In insert mode:
+<C-j> to move to the next set of {}
+`s - \sum_{}^{}
+`m - \mathbb{}
+`/ - \frac{}{}
