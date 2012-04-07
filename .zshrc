@@ -36,6 +36,7 @@ export SAVEHIST=5000
 export HISTFILE=~/.zshistory
 export CATALINA_HOME=/opt/tomcat
 export NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 
 #functions
 calc() { awk "BEGIN { print $* }"; }
