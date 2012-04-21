@@ -266,3 +266,6 @@ let g:tagbar_type_scala = {
         \ 'm:methods'
     \ ]
 \ }
+"Start Tagbar for Scala files
+autocmd BufRead,BufNewFile *.scala execute "normal ,t"
+
