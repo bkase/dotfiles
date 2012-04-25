@@ -29,6 +29,8 @@ alias cls='clear && ls'
 alias homeconfig='git --git-dir=$HOME/.homeconfig.git/ --work-tree=$HOME'
 #override gc to awesome git commit offered by scm_breeze
 alias gc='git_add_and_commit'
+#add git-paradox
+alias gpdx='git paradox'
 
 #exports
 export PATH=$PATH:/opt/android-sdk/platform-tools/adb:/opt/android-ndk-crystax/
