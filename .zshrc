@@ -6,6 +6,7 @@ prompt walters
 
 #sources
 source ~/.zsh/zsh-git-prompt/zshrc.sh
+[ -s "/home/bkase/.scm_breeze/scm_breeze.sh" ] && source "/home/bkase/.scm_breeze/scm_breeze.sh"
 
 #update prompt
 PROMPT='%B%(?..[%?] )%b%n@%U%m%u$(git_super_status)> '
@@ -26,6 +27,8 @@ alias clear='clear && archey -c white'
 alias c='clear'
 alias cls='clear && ls'
 alias homeconfig='git --git-dir=$HOME/.homeconfig.git/ --work-tree=$HOME'
+#override gc to awesome git commit offered by scm_breeze
+alias gc='git_add_and_commit'
 
 #exports
 export PATH=$PATH:/opt/android-sdk/platform-tools/adb:/opt/android-ndk-crystax/
@@ -54,4 +57,3 @@ cd `cat /tmp/.cwd`
 
 archey -c white
 
-[ -s "/home/bkase/.scm_breeze/scm_breeze.sh" ] && source "/home/bkase/.scm_breeze/scm_breeze.sh"
