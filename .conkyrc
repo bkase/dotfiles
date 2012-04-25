@@ -83,4 +83,4 @@ ${color3}Bright: ${tail /sys/class/backlight/acpi_video0/brightness 1}${color} |
 ${color7}Vol: ${execi 2 amixer get Master | grep "Mono:" | awk '{print $4}' | sed -E 's/\[//' | sed -E 's/\]//'}${color} | \
 ${color4}BAT0: ${execi 3 acpi -b | grep -E 'Battery.0' | awk '{ print $4" "$3" "$5 }'} ${color}| \
 ${color4}BAT1: ${execi 3 acpi -b | grep -E 'Battery.1' | awk '{ print $4" "$3" "$5 }'} ${color}| \
-${color5}wlan0: [${color7}${addr wlan0}${color2} |  ${color7}${execi 90 wget -qO- http://whatismyip.org}${color5}]:${color} ${color6} | ${totalup wlan0} | ${totaldown wlan0} | ${wireless_link_qual_perc wlan0}% ${color} 
+${color5}wlan0: [${color7}${addr wlan0}${color2} |  ${color7}${execi 90 wget -qO- http://ifconfig.me/ip}${color5}]:${color} ${color6} | ${totalup wlan0} | ${totaldown wlan0} | ${wireless_link_qual_perc wlan0}% ${color} 
