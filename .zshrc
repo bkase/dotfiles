@@ -53,3 +53,5 @@ touch /tmp/.cwd
 cd `cat /tmp/.cwd`
 
 archey -c white
+
+[ -s "/home/bkase/.scm_breeze/scm_breeze.sh" ] && source "/home/bkase/.scm_breeze/scm_breeze.sh"
