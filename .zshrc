@@ -7,6 +7,7 @@ prompt walters
 #sources
 source ~/.zsh/zsh-git-prompt/zshrc.sh
 [ -s "/home/bkase/.scm_breeze/scm_breeze.sh" ] && source "/home/bkase/.scm_breeze/scm_breeze.sh"
+eval `lesspipe.sh`
 
 #update prompt
 PROMPT='%B%(?..[%?] )%b%n@%U%m%u$(git_super_status)> '
