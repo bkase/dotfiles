@@ -16,6 +16,8 @@ PROMPT='%B%(?..[%?] )%b%n@%U%m%u$(git_super_status)> '
 bindkey "^R" history-incremental-search-backward
 
 #alias
+alias v='vim'
+alias vi='vim'
 alias sml='rlwrap sml'
 alias sudo='sudo '
 alias vit='vim ~/.todo.txt'
