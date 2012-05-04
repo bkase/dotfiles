@@ -199,20 +199,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "j", function () awful.screen.focus_relative( 1) end),
     awful.key({ modkey, "Control" }, "k", function () awful.screen.focus_relative(-1) end),
     awful.key({ modkey,           }, "u", awful.client.urgent.jumpto),
-    awful.key({ modkey,           }, "Tab",
-        function ()
-            local workspace = 0
-            if (isInTodo) then 
-                workspace = lastWorkspace
-                isInTodo = false
-            else 
-                workspace = 9
-                isInTodo = true
-            end
-            awful.util.spawn("echo " + workspace + " > /home/bkase/.config/awesome/workspace")
-            awful.tag.viewonly(tags[screen][workspace])
-        end),
-
+    
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.util.spawn(terminal) end),
     awful.key({ modkey, "Control" }, "r", awesome.restart),
