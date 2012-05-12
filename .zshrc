@@ -47,6 +47,7 @@ export CATALINA_HOME=/opt/tomcat
 export NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 # Less Colors for Man Pages
+# http://linuxtidbits.wordpress.com/2009/03/23/less-colors-for-man-pages/
 export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
 export LESS_TERMCAP_md=$'\E[01;38;5;74m'  # begin bold
 export LESS_TERMCAP_me=$'\E[0m'           # end mode
@@ -58,6 +59,11 @@ export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 #functions
 calc() { awk "BEGIN { print $* }"; }
 record_pwd() { pwd > /tmp/.cwd }
+#http://talkings.org/post/5236392664/zsh-and-slow-git-completion
+#Make git completion faster
+__git_files () { 
+    _wanted files expl ‘local files’ _files 
+}
 
 #register hooks
 add-zsh-hook chpwd record_pwd
