@@ -36,7 +36,7 @@ alias gc='git_add_and_commit'
 alias gpdx='git paradox'
 
 #exports
-export PATH=$PATH:/opt/android-sdk/platform-tools/adb:/opt/android-ndk-crystax/
+export PATH=$PATH:/opt/android-sdk/platform-tools/adb:/opt/android-ndk-crystax/:/home/.gem/ruby/1.9.1/bin
 export EDITOR=vim
 export ECLIPSE_HOME=/usr/share/eclipse
 export HISTSIZE=10000
