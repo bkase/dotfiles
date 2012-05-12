@@ -7,6 +7,7 @@ prompt walters
 #sources
 source ~/.zsh/zsh-git-prompt/zshrc.sh
 [ -s "/home/bkase/.scm_breeze/scm_breeze.sh" ] && source "/home/bkase/.scm_breeze/scm_breeze.sh"
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 eval `lesspipe.sh`
 
 #update prompt
