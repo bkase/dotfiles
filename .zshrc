@@ -21,12 +21,11 @@ alias vi='vim'
 alias sml='rlwrap sml'
 alias sudo='sudo '
 alias vit='vim ~/.todo.txt'
-alias ls='ls'
+alias ls='ls --color=auto --group-directories-first'
 alias l='ls'
 alias mv='mv -i'
 alias cp='cp -i'
 alias rm='rm -i'
-alias clear='clear'
 alias c='clear'
 alias cls='clear && ls'
 alias homeconfig='git --git-dir=$HOME/.homeconfig.git/ --work-tree=$HOME'
@@ -36,7 +35,7 @@ alias gc='git_add_and_commit'
 alias gpdx='git paradox'
 
 #exports
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export PATH=/opt/local/libexec/gnubin:/opt/local/bin:/opt/local/sbin:$PATH
 #export MANPATH=/opt/local/share/man:$MANPATH
 export EDITOR=vim
 export ECLIPSE_HOME=/usr/share/eclipse
