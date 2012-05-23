@@ -1,1 +1,0 @@
-/usr/share/vim-scripts/haskellmode/ftplugin/haskell_hpaste.vim

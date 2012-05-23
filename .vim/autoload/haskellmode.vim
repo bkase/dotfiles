@@ -1,1 +1,0 @@
-/usr/share/vim-scripts/haskellmode/autoload/haskellmode.vim

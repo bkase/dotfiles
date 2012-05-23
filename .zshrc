@@ -6,9 +6,8 @@ prompt walters
 
 #sources
 source ~/.zsh/zsh-git-prompt/zshrc.sh
-[ -s "/home/bkase/.scm_breeze/scm_breeze.sh" ] && source "/home/bkase/.scm_breeze/scm_breeze.sh"
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-eval `lesspipe.sh`
+[ -s "/Users/brandonk/.scm_breeze/scm_breeze.sh" ] && source "/Users/brandonk/.scm_breeze/scm_breeze.sh"
+source ~/.config/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #update prompt
 PROMPT='%B%(?..[%?] )%b%n@%U%m%u$(git_super_status)> '
@@ -22,12 +21,12 @@ alias vi='vim'
 alias sml='rlwrap sml'
 alias sudo='sudo '
 alias vit='vim ~/.todo.txt'
-alias ls='ls --color=auto --group-directories-first'
+alias ls='ls'
 alias l='ls'
 alias mv='mv -i'
 alias cp='cp -i'
 alias rm='rm -i'
-alias clear='clear && archey -c white'
+alias clear='clear'
 alias c='clear'
 alias cls='clear && ls'
 alias homeconfig='git --git-dir=$HOME/.homeconfig.git/ --work-tree=$HOME'
@@ -37,7 +36,8 @@ alias gc='git_add_and_commit'
 alias gpdx='git paradox'
 
 #exports
-export PATH=$PATH:/opt/android-sdk/platform-tools/adb:/opt/android-ndk-crystax/:/home/.gem/ruby/1.9.1/bin
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+#export MANPATH=/opt/local/share/man:$MANPATH
 export EDITOR=vim
 export ECLIPSE_HOME=/usr/share/eclipse
 export HISTSIZE=10000
@@ -55,6 +55,7 @@ export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
 export LESS_TERMCAP_so=$'\E[38;5;246m'    # begin standout-mode - info box
 export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
+export LESSOPEN='| /opt/local/bin/lesspipe.sh %s'
 
 #functions
 calc() { awk "BEGIN { print $* }"; }
@@ -75,5 +76,4 @@ export LS_COLORS
 touch /tmp/.cwd
 cd `cat /tmp/.cwd`
 
-archey -c white
 
