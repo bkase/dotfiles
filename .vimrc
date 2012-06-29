@@ -34,11 +34,11 @@ set noswapfile
 set wrapscan
 
 " tab and indentation
-set tabstop=4
-set softtabstop=4
+set tabstop=2
+set softtabstop=2
 set noexpandtab
 set smarttab
-set shiftwidth=4
+set shiftwidth=2
 set backspace=indent,eol,start
 set autoindent
 set smartindent
@@ -190,7 +190,7 @@ autocmd BufRead,BufNewFile *.py set ai
 autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,with,try,except,finally,def,class
 
 " indent-guides config
-set ts=4 sw=4 et
+set ts=2 sw=2 et
 let g:indent_guides_guide_size = 1
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=darkgrey   ctermbg=darkgrey
