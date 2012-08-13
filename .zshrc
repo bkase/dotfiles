@@ -36,6 +36,9 @@ alias homeconfig='git --git-dir=$HOME/.homeconfig.git/ --work-tree=$HOME'
 alias gc='git_add_and_commit'
 #add git-paradox
 alias gpdx='git paradox'
+#short git log
+alias wlog='git log --oneline --decorate'
+alias grb-first='git_squash_second_with_initial'
 
 #exports
 export PATH=$PATH:/opt/android-sdk/platform-tools/adb:/opt/android-ndk-crystax/:/home/.gem/ruby/1.9.1/bin
@@ -60,6 +63,17 @@ export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 #functions
 calc() { awk "BEGIN { print $* }"; }
 record_pwd() { pwd > /tmp/.cwd }
+git_squash_second_with_initial() {
+  SECOND=$1
+  INITIAL=$2
+  git checkout $SECOND
+  git reset --soft $INITIAL
+  git commit --amend -m "Initial commit"
+  git tag initial
+  git checkout master
+  git rebase --onto initial $SECOND
+  git tag -d initial
+}
 #http://talkings.org/post/5236392664/zsh-and-slow-git-completion
 #Make git completion faster
 __git_files () { 
