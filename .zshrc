@@ -1,23 +1,23 @@
-#basic stuff
+# basic stuff
 autoload -U compinit promptinit add-zsh-hook
 compinit
 promptinit
 prompt walters
 
-#sources
+# sources
 source ~/.zsh/zsh-git-prompt/zshrc.sh
 [ -s "/home/bkase/.scm_breeze/scm_breeze.sh" ] && source "/home/bkase/.scm_breeze/scm_breeze.sh"
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 eval `lesspipe.sh`
 . resty
 
-#update prompt
+# update prompt
 PROMPT='%B%(?..[%?] )%b%n@%U%m%u$(git_super_status)> '
 
-#binds
+# binds
 bindkey "^R" history-incremental-search-backward
 
-#alias
+# alias
 alias v='vim'
 alias vi='vim'
 alias sml='rlwrap sml'
@@ -32,13 +32,16 @@ alias clear='clear && archey -c white'
 alias c='clear'
 alias cls='clear && ls'
 alias homeconfig='git --git-dir=$HOME/.homeconfig.git/ --work-tree=$HOME'
-#override gc to awesome git commit offered by scm_breeze
+# override gc to awesome git commit offered by scm_breeze
 alias gc='git_add_and_commit'
-#add git-paradox
+# add git-paradox
 alias gpdx='git paradox'
-#short git log
+# short git log
 alias wlog='git log --oneline --decorate'
+# rebase the second commit into the initial commit (this isn't straightforward)
 alias grb-first='git_squash_second_with_initial'
+# git-grep
+alias ggp='git grep'
 
 #exports
 export PATH=$PATH:/opt/android-sdk/platform-tools/adb:/opt/android-ndk-crystax/:/home/.gem/ruby/1.9.1/bin
