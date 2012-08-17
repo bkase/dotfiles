@@ -102,7 +102,7 @@
 *color7:                S_base2
 *color15:               S_base3
 
-*font: xft:DejaVuSansMono:pixelsize=15:antialias=true
+*font: xft:DejaVuSansMono:pixelsize=18:antialias=true
 !!URXVT
 
 !!URxvt*font: xft:Bitstream Vera Sans Mono:pixelsize=15
