@@ -1,0 +1,42 @@
+#!/bin/bash
+#
+# Put this script in ~/.vim/
+# Dependencies:
+#   curl, tidy, an internet browser
+# 
+# Put this in your .vimrc:
+#"Better silent from slack3r here: 
+#"http://stackoverflow.com/questions/890802/vim-disable-press-enter-or-type-command-to-continue-prompt
+#command! -nargs=1 Silent
+#\ | execute ':silent !'.<q-args>
+#\ | execute ':redraw!'
+#autocmd FileType scala nnoremap K :Silent ~/.vim/scala_doc <cword> <CR>
+#
+
+BROWSER=chromium
+KEYWORD=$1
+if [[ ! -f ~/.vim/.scala_std_cache ]]; then
+    curl -silent http://www.scala-lang.org/api/current/index.html > ~/.vim/.scala_lib.html
+    tidy -imq -f /dev/null ~/.vim/.scala_lib.html
+    #TODO: Periodically update the cache?
+    cat ~/.vim/.scala_lib.html | egrep 'scala/.*\.html' | sed 's/.*\(scala\/.*\.html\).*/\1/' > ~/.vim/.scala_std_cache
+    rm ~/.vim/.scala_lib.html
+fi
+
+while read line; do
+    if [[ $line == scala*/$KEYWORD.html* ]]; then
+        $BROWSER http://www.scala-lang.org/api/current/$line
+        exit 0
+    fi
+done < ~/.vim/.scala_std_cache
+
+# Now look for the ones ending in $
+while read line; do
+    if [[ $line == scala*/${KEYWORD}'$'* ]]; then
+        $BROWSER http://www.scala-lang.org/api/current/$line
+        exit 0
+    fi
+done < ~/.vim/.scala_std_cache
+
+# we couldn't find the class
+exit 1

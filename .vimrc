@@ -90,6 +90,7 @@ syntax on
 set mouse=a
 
 " set colorscheme
+"set bg=dark
 "colorscheme solarized
 colorscheme dawn
 
@@ -231,7 +232,7 @@ autocmd BufWritePost *.tex execute "normal ,ll"
 "custom folds
 let g:Tex_FoldedEnvironments = 'question,verbatim,comment,eq,gather,itemize,align,figure,table,thebibliography,keywords,abstract,titlepage'
 "awesome macros
-autocmd BufRead,BufNewFile *.tex call IMAP('`s', '\sum_{<++>}^{<++>}<++>', 'tex')
+autocmd BufRead,BufNewFile *.tex call IMAP('`s', '\sum_{}^{<++>}<++>', 'tex')
 autocmd BufRead,BufNewFile *.tex call IMAP('`m', '\mathbb{<++>}<++>', 'tex')
 autocmd BufRead,BufNewFile *.tex call IMAP('`v', '\verb~<++>~<++>', 'tex')
 autocmd BufRead,BufNewFile *.tex call IMAP('`l', '\lambda', 'tex')
@@ -244,6 +245,7 @@ autocmd BufRead,BufNewFile *todo.txt set filetype=todo.txt
 
 "make haskell files override 'K' functionality
 autocmd FileType haskell nnoremap K :call Haddock()
+
 autocmd ShellCmdPost *.hs redraw!
 let g:haddock_browser = '/usr/bin/lynx'
 
@@ -268,4 +270,12 @@ let g:tagbar_type_scala = {
 \ }
 "Start Tagbar for Scala files
 autocmd BufRead,BufNewFile *.scala execute "normal ,t"
+"Scala man page remap to open scaladocs
+autocmd FileType scala set keywordprg=~/.vim/scala_doc
+"Better silent from slack3r here:
+"http://stackoverflow.com/questions/890802/vim-disable-press-enter-or-type-command-to-continue-prompt
+command! -nargs=1 Silent
+            \ | execute ':silent !'.<q-args>
+            \ | execute ':redraw!'
+autocmd FileType scala nnoremap K :Silent ~/.vim/scala_doc <cword> <CR>
 

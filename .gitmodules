@@ -64,3 +64,16 @@
 [submodule ".vim/bundle/zencoding"]
 	path = .vim/bundle/zencoding
 	url = git://github.com/mattn/zencoding-vim.git
+[submodule "/home/bkase/.vim/bundle/syntastic"]
+	path = /home/bkase/.vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "vim-statline"]
+	path = vim-statline
+	url = https://github.com/millermedeiros/vim-statline.git
+[submodule ".vim/bundle/statline"]
+	path = .vim/bundle/statline
+	url = https://github.com/millermedeiros/vim-statline.git
+[submodule "/home/bkase/.vim/bundle/vim-colors-solarized"]
+	path = /home/bkase/.vim/bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+
