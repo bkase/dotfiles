@@ -97,7 +97,6 @@ cd `cat /tmp/.cwd`
 
 archey -c white
 
-
 export PERL_LOCAL_LIB_ROOT="/home/bkase/perl5";
 export PERL_MB_OPT="--install_base /home/bkase/perl5";
 export PERL_MM_OPT="INSTALL_BASE=/home/bkase/perl5";
