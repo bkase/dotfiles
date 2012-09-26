@@ -8,6 +8,7 @@ prompt walters
 source ~/.zsh/zsh-git-prompt/zshrc.sh
 [ -s "/home/bkase/.scm_breeze/scm_breeze.sh" ] && source "/home/bkase/.scm_breeze/scm_breeze.sh"
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /home/bkase/phabricator/arcanist/resources/shell/bash-completion
 eval `lesspipe.sh`
 . resty
 
@@ -44,7 +45,7 @@ alias grb-first='git_squash_second_with_initial'
 alias ggp='git grep'
 
 #exports
-export PATH=$PATH:/opt/android-sdk/platform-tools/adb:/opt/android-ndk-crystax/:/home/.gem/ruby/1.9.1/bin
+export PATH=$PATH:/opt/android-sdk/platform-tools/adb:/opt/android-ndk-crystax/:/home/.gem/ruby/1.9.1/bin:/home/bkase/phabricator/arcanist/bin
 export EDITOR=vim
 export ECLIPSE_HOME=/usr/share/eclipse
 export HISTSIZE=10000
@@ -96,3 +97,9 @@ cd `cat /tmp/.cwd`
 
 archey -c white
 
+
+export PERL_LOCAL_LIB_ROOT="/home/bkase/perl5";
+export PERL_MB_OPT="--install_base /home/bkase/perl5";
+export PERL_MM_OPT="INSTALL_BASE=/home/bkase/perl5";
+export PERL5LIB="/home/bkase/perl5/lib/perl5/x86_64-linux-thread-multi:/home/bkase/perl5/lib/perl5";
+export PATH="/home/bkase/perl5/bin:$PATH";
