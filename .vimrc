@@ -278,4 +278,5 @@ command! -nargs=1 Silent
             \ | execute ':silent !'.<q-args>
             \ | execute ':redraw!'
 autocmd FileType scala nnoremap K :Silent ~/.vim/scala_doc <cword> <CR>
-
+" Make Jakefiles have proper syntax
+autocmd BufRead,BufNewFile Jakefile set ft=javascript
