@@ -80,9 +80,9 @@ git_squash_second_with_initial() {
 }
 #http://talkings.org/post/5236392664/zsh-and-slow-git-completion
 #Make git completion faster
-__git_files () { 
-    _wanted files expl ‘local files’ _files 
-}
+#__git_files () {
+#    _wanted files expl ‘local files’ _files
+#}
 
 #register hooks
 add-zsh-hook chpwd record_pwd
