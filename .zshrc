@@ -45,7 +45,7 @@ alias grb-first='git_squash_second_with_initial'
 alias ggp='git grep'
 
 #exports
-export PATH=$PATH:/opt/android-sdk/platform-tools/adb:/opt/android-ndk-crystax/:/home/.gem/ruby/1.9.1/bin:/home/bkase/phabricator/arcanist/bin
+export PATH=/usr/local/bin:$PATH:/opt/android-sdk/platform-tools/adb:/opt/android-ndk-crystax/:/home/.gem/ruby/1.9.1/bin:/home/bkase/phabricator/arcanist/bin
 export EDITOR=vim
 export ECLIPSE_HOME=/usr/share/eclipse
 export HISTSIZE=10000
