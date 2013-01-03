@@ -77,3 +77,6 @@
 	path = /home/bkase/.vim/bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
 
+[submodule ".vim/bundle/typescript"]
+	path = .vim/bundle/typescript
+	url = git@github.com:dmitry-ilyashevich/vim-typescript.git
