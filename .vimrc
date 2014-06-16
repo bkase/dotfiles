@@ -34,11 +34,11 @@ set noswapfile
 set wrapscan
 
 " tab and indentation
-set tabstop=4
-set softtabstop=4
+set tabstop=2
+set softtabstop=2
 set noexpandtab
 set smarttab
-set shiftwidth=4
+set shiftwidth=2
 set backspace=indent,eol,start
 set autoindent
 set smartindent
@@ -90,8 +90,8 @@ syntax on
 set mouse=a
 
 " set colorscheme
-"colorscheme solarized
-colorscheme dawn
+colorscheme solarized
+"colorscheme dawn
 
 "allows sudo with :w!!
 cmap w!! %!sudo tee > /dev/null %
@@ -143,7 +143,7 @@ set hidden
 
 set history=1000   " remember more commands and search history
 set undolevels=1000 " use many levels of undo
-set wildignore=*.swp,*.bak,*.pyc,*.class
+set wildignore=*.swp,*.bak,*.pyc,*.class,*.o,*.so
 "set title "terminal title
 
 " Shows spaces as you're writing
@@ -190,7 +190,7 @@ autocmd BufRead,BufNewFile *.py set ai
 autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,with,try,except,finally,def,class
 
 " indent-guides config
-set ts=4 sw=4 et
+set ts=2 sw=2 et
 let g:indent_guides_guide_size = 1
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=darkgrey   ctermbg=darkgrey
@@ -248,7 +248,9 @@ autocmd ShellCmdPost *.hs redraw!
 let g:haddock_browser = '/usr/bin/lynx'
 
 "fix the bad search color with solarized
-hi Search ctermbg=7
+"hi Search ctermbg=7
+"make solarized dark the default
+set bg=dark
 
 "Scala tagbar configuration
 let g:tagbar_type_scala = {
@@ -268,4 +270,46 @@ let g:tagbar_type_scala = {
 \ }
 "Start Tagbar for Scala files
 autocmd BufRead,BufNewFile *.scala execute "normal ,t"
+
+let g:Powerline_symbols = 'fancy'
+let g:Powerline_theme = 'skwp'
+let g:Powerline_colorscheme = 'skwp'
+
+"Powerline?
+"python import sys; sys.path.append("/Library/Python/2.7/site-packages")
+"python from powerline.bindings import vim
+"airline
+let g:airline_theme='solarized'
+" remove separators
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '◀'
+" remove unused modes
+let g:airline_enable_fugitive=1
+let g:airline_enable_syntastic=1
+let g:airline_section_x=""
+" put filetype in fifth section
+let g:airline_section_y="%y"
+" make Esc happen without waiting for timeoutlen
+" fixes airline delay
+"augroup FastEscape
+"autocmd!
+"au InsertEnter * set timeoutlen=0
+"au InsertLeave * set timeoutlen=1000
+"augroup END
+
+let g:javascript_conceal=1
+
+" better markdown
+augroup markdown
+    au!
+    au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
+augroup END
+
+" Ctrl-P
+nnoremap gt :bnext<CR>
+nnoremap gT :bprevious<CR>
+nnoremap gd :BD<CR>
+
+" Golang wants REAL TABS
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
 
